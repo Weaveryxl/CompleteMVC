@@ -1,0 +1,15 @@
+﻿@using System.Security.Principal
+@using CompleteMVC.Infrastructure
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div>
+    @{
+        SchoolPrincipal loggedinUser = ((User as SchoolPrincipal)); // where is this user come from? why does it have the name of user? Where did we set it?
+    }
+    <h3>
+        Hello @loggedinUser.FirstName,@loggedinUser.LastName;
+    </h3>
+
+</div>
